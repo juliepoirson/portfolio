@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import AnchorLink from 'react-anchor-link-smooth-scroll-v2'
 import { UilGlobe } from '@iconscout/react-unicons'
 
 export default function Header() {
@@ -17,38 +18,38 @@ export default function Header() {
 							</Link>
 						</li>
 						<li className='nav__item'>
-							<Link href='#about' className='nav__link'>
+							<AnchorLink href='#about' className='nav__link'>
 								<i className='uil uil-user nav__icon'></i> About
-							</Link>
+							</AnchorLink>
 						</li>
 						<li className='nav__item'>
-							<Link href='#skills' className='nav__link'>
+							<AnchorLink href='#skills' className='nav__link'>
 								<i className='uil uil-file-alt nav__icon'></i> Skills
-							</Link>
+							</AnchorLink>
 						</li>
 						<li className='nav__item'>
-							<Link href='#portfolio' className='nav__link'>
+							<AnchorLink href='#portfolio' className='nav__link'>
 								<i className='uil uil-scenery nav__icon'></i> Portfolio
-							</Link>
+							</AnchorLink>
 						</li>
 						<li className='nav__item'>
-							<Link href='#contact' className='nav__link'>
+							<AnchorLink href='#contact' className='nav__link'>
 								<i className='uil uil-message nav__icon'></i> Contact me
-							</Link>
+							</AnchorLink>
 						</li>
 					</ul>
 					<i className='uil uil-times nav__close' id='nav-close'></i>
 				</div>
 
-				<div className='nav__btns'>
-					{/* LANGUAGES */}
+				{/* <div className='nav__btns'>
+					LANGUAGES 
 					<i className='change-lang' id='lang-button'>
 						<UilGlobe />
 					</i>
 					<div className='nav__toggle' id='nav-toggle'>
 						<i className='uil uil-apps'></i>
 					</div>
-				</div>
+				</div> */}
 			</nav>
 		</header>
 	)

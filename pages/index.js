@@ -1,8 +1,17 @@
 import Link from 'next/link'
 import Head from 'next/head'
 import Image from 'next/image'
+import React from 'react'
 import { useState } from 'react'
+
 import AnchorLink from 'react-anchor-link-smooth-scroll-v2'
+import Accordion from '@mui/material/Accordion'
+import AccordionDetails from '@mui/material/AccordionDetails'
+import AccordionSummary from '@mui/material/AccordionSummary'
+
+import portrait from '../assets/portrait.png'
+import resume from '../assets/resume.png'
+
 import { UilLinkedin } from '@iconscout/react-unicons'
 import { UilGithub } from '@iconscout/react-unicons'
 import { UilMessage } from '@iconscout/react-unicons'
@@ -23,10 +32,14 @@ import { UilPhone } from '@iconscout/react-unicons'
 import { UilEnvelope } from '@iconscout/react-unicons'
 import { UilMapMarker } from '@iconscout/react-unicons'
 import { UilComments } from '@iconscout/react-unicons'
-import portrait from '../assets/portrait.png'
-import resume from '../assets/resume.png'
 
 export default function Home() {
+	const [expanded, setExpanded] = useState(false)
+
+	const handleChange = (panel) => (event, isExpanded) => {
+		setExpanded(isExpanded ? panel : false)
+	}
+
 	return (
 		<>
 			<Head>
@@ -160,136 +173,168 @@ export default function Home() {
 					</section>
 					{/* ==================== SKILLS ==================== */}
 					<section className='skills section' id='skills'>
-						<h2 className='section__title'>Skills</h2>
-						<span className='section__subtitle'>My technical level</span>
-						<div className='skills__container container grid'>
-							{/* ==================== SKILLS 1 ==================== */}
-							<div className='skills__content skills__open'>
-								<div className='skills__header'>
-									<UilCrosshair className='skills__icon' />
-
-									<div>
-										<h1 className='skills__title'>Marketing</h1>
-										<span className='skills__subtitle'>2 years</span>
-									</div>
-									<UilAngleDown className='skills__arrow' />
-								</div>
-
-								<div className='skills__list grid'>
-									<div className='skills__data'>
-										<div className='skills__titles'>
-											<h3 className='skills__name'>Inbound Marketing</h3>
-											<span className='skills__number'>80%</span>
-										</div>
-										<div className='skills__bar'>
-											<span className='skills__percentage skills__inbound'></span>
-										</div>
-									</div>
-									<div className='skills__data'>
-										<div className='skills__titles'>
-											<h3 className='skills__name'>Marketing Research</h3>
-											<span className='skills__number'>50%</span>
-										</div>
-										<div className='skills__bar'>
-											<span className='skills__percentage skills__research'></span>
-										</div>
-									</div>
-									<div className='skills__data'>
-										<div className='skills__titles'>
-											<h3 className='skills__name'>Hubspot</h3>
-											<span className='skills__number'>40%</span>
-										</div>
-										<div className='skills__bar'>
-											<span className='skills__percentage skills__hubspot'></span>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							{/* ==================== SKILLS 2 ==================== */}
-							<div className='skills__content skills__close'>
-								<div className='skills__header'>
-									<UilSwatchbook className='skills__icon' />
-									<div>
-										<h1 className='skills__title'>Graphic Design</h1>
-										<span className='skills__subtitle'> ~About two years</span>
-									</div>
-
-									<UilAngleDown className='skills__arrow' />
-								</div>
-
-								<div className='skills__list grid'>
-									<div className='skills__data'>
-										<div className='skills__titles'>
-											<h3 className='skills__name'>Canva</h3>
-											<span className='skills__number'>80%</span>
-										</div>
-										<div className='skills__bar'>
-											<span className='skills__percentage skills__canva'></span>
-										</div>
-									</div>
-									<div className='skills__data'>
-										<div className='skills__titles'>
-											<h3 className='skills__name'>Photoshop</h3>
-											<span className='skills__number'>10%</span>
-										</div>
-										<div className='skills__bar'>
-											<span className='skills__percentage skills__photoshop'></span>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							{/* ==================== SKILLS 3 ==================== */}
-							<div className='skills__content skills__close'>
-								<div className='skills__header'>
-									<UilBracketsCurly className='skills__icon' />
-
-									<div>
-										<h1 className='skills__title'>Programming</h1>
-										<span className='skills__subtitle'>Less than a year</span>
-									</div>
-
-									<UilAngleDown className='skills__arrow' />
-								</div>
-
-								<div className='skills__list grid'>
-									<div className='skills__data'>
-										<div className='skills__titles'>
-											<h3 className='skills__name'>SQL</h3>
-											<span className='skills__number'>50%</span>
-										</div>
-										<div className='skills__bar'>
-											<span className='skills__percentage skills__sql'></span>
-										</div>
-									</div>
-									<div className='skills__data'>
-										<div className='skills__titles'>
-											<h3 className='skills__name'>Java</h3>
-											<span className='skills__number'>30%</span>
-										</div>
-										<div className='skills__bar'>
-											<span className='skills__percentage skills__java'></span>
-										</div>
-									</div>
-									<div className='skills__data'>
-										<div className='skills__titles'>
-											<h3 className='skills__name'>HTML</h3>
-											<span className='skills__number'>30%</span>
-										</div>
-										<div className='skills__bar'>
-											<span className='skills__percentage skills__html'></span>
-										</div>
-									</div>
-									<div className='skills__data'>
-										<div className='skills__titles'>
-											<h3 className='skills__name'>Python</h3>
-											<span className='skills__number'>20%</span>
-										</div>
-										<div className='skills__bar'>
-											<span className='skills__percentage skills__python'></span>
-										</div>
-									</div>
+						<div className='skills__content'>
+							<h2 className='section__title'>Skills</h2>
+							<span className='section__subtitle'>My technical level</span>
+							<div className='skills__container container grid'>
+								<div>
+									{/* ==================== SKILLS 1 ==================== */}
+									<Accordion
+										expanded={expanded === 'panel3'}
+										onChange={handleChange('panel3')}
+										className='skills__accordion'
+									>
+										<AccordionSummary
+											expandIcon={<UilAngleDown className='skills__arrow' />}
+											aria-controls='panel3bh-content'
+											id='panel3bh-header'
+										>
+											<div className='skills__header'>
+												<UilBracketsCurly className='skills__icon' />
+												<div>
+													<h1 className='skills__title'>Programming</h1>
+													<span className='skills__subtitle'>
+														Less than a year
+													</span>
+												</div>
+											</div>
+										</AccordionSummary>
+										<AccordionDetails>
+											<div className='skills__list grid'>
+												<div className='skills__data'>
+													<div className='skills__titles'>
+														<h3 className='skills__name'>SQL</h3>
+														<span className='skills__number'>50%</span>
+													</div>
+													<div className='skills__bar'>
+														<span className='skills__percentage skills__sql'></span>
+													</div>
+												</div>
+												<div className='skills__data'>
+													<div className='skills__titles'>
+														<h3 className='skills__name'>Java</h3>
+														<span className='skills__number'>30%</span>
+													</div>
+													<div className='skills__bar'>
+														<span className='skills__percentage skills__java'></span>
+													</div>
+												</div>
+												<div className='skills__data'>
+													<div className='skills__titles'>
+														<h3 className='skills__name'>HTML</h3>
+														<span className='skills__number'>30%</span>
+													</div>
+													<div className='skills__bar'>
+														<span className='skills__percentage skills__html'></span>
+													</div>
+												</div>
+												<div className='skills__data'>
+													<div className='skills__titles'>
+														<h3 className='skills__name'>Python</h3>
+														<span className='skills__number'>20%</span>
+													</div>
+													<div className='skills__bar'>
+														<span className='skills__percentage skills__python'></span>
+													</div>
+												</div>
+											</div>
+										</AccordionDetails>
+									</Accordion>
+									{/* ==================== SKILLS 2 ==================== */}
+									<Accordion
+										expanded={expanded === 'panel1'}
+										onChange={handleChange('panel1')}
+										className='skills__accordion'
+									>
+										<AccordionSummary
+											expandIcon={<UilAngleDown className='skills__arrow' />}
+											aria-controls='panel1bh-content'
+											id='panel1bh-header'
+										>
+											<div className='skills__header'>
+												<UilCrosshair className='skills__icon' />
+												<div>
+													<h1 className='skills__title'>Marketing</h1>
+													<span className='skills__subtitle'>2 years</span>
+												</div>
+											</div>
+										</AccordionSummary>
+										<AccordionDetails>
+											<div className='skills__list grid'>
+												<div className='skills__data'>
+													<div className='skills__titles'>
+														<h3 className='skills__name'>Inbound Marketing</h3>
+														<span className='skills__number'>80%</span>
+													</div>
+													<div className='skills__bar'>
+														<span className='skills__percentage skills__inbound'></span>
+													</div>
+												</div>
+												<div className='skills__data'>
+													<div className='skills__titles'>
+														<h3 className='skills__name'>Marketing Research</h3>
+														<span className='skills__number'>50%</span>
+													</div>
+													<div className='skills__bar'>
+														<span className='skills__percentage skills__research'></span>
+													</div>
+												</div>
+												<div className='skills__data'>
+													<div className='skills__titles'>
+														<h3 className='skills__name'>Hubspot</h3>
+														<span className='skills__number'>40%</span>
+													</div>
+													<div className='skills__bar'>
+														<span className='skills__percentage skills__hubspot'></span>
+													</div>
+												</div>
+											</div>
+										</AccordionDetails>
+									</Accordion>
+									{/* ==================== SKILLS 3 ==================== */}
+									<Accordion
+										expanded={expanded === 'panel2'}
+										onChange={handleChange('panel2')}
+										className='skills__accordion'
+									>
+										<AccordionSummary
+											expandIcon={<UilAngleDown className='skills__arrow' />}
+											aria-controls='panel2bh-content'
+											id='panel2bh-header'
+										>
+											<div className='skills__header'>
+												<UilSwatchbook className='skills__icon' />
+												<div>
+													<h1 className='skills__title'>Graphic Design</h1>
+													<span className='skills__subtitle'>
+														~About two years
+													</span>
+												</div>
+											</div>
+										</AccordionSummary>
+										<AccordionDetails>
+											<div className='skills__list grid'>
+												<div className='skills__data'>
+													<div className='skills__titles'>
+														<h3 className='skills__name'>Canva</h3>
+														<span className='skills__number'>80%</span>
+													</div>
+													<div className='skills__bar'>
+														<span className='skills__percentage skills__canva'></span>
+													</div>
+												</div>
+												<div className='skills__data'>
+													<div className='skills__titles'>
+														<h3 className='skills__name'>Photoshop</h3>
+														<span className='skills__number'>10%</span>
+													</div>
+													<div className='skills__bar'>
+														<span className='skills__percentage skills__photoshop'></span>
+													</div>
+												</div>
+											</div>
+										</AccordionDetails>
+									</Accordion>
 								</div>
 							</div>
 						</div>
@@ -308,7 +353,6 @@ export default function Home() {
 									<UilGraduationCap className='qualification__icon' />
 									Education
 								</div>
-
 								<div
 									className='qualification__button button--flex'
 									data-target='#work'
@@ -444,6 +488,7 @@ export default function Home() {
 						</div>
 					</section>
 					{/* ==================== PORTFOLIO ==================== */}
+
 					<section className='portfolio section' id='portfolio'>
 						<h2 className='section__title'>Portfolio</h2>
 						<span className='section__subtitle'>Most recent work</span>

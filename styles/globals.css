@@ -411,6 +411,10 @@ img {
 
 /*==================== SKILLS ====================*/
 
+.skills__content {
+	margin-bottom: 5rem;
+}
+
 .skills__container {
 	row-gap: 0;
 }
@@ -449,6 +453,11 @@ img {
 .skills__list {
 	row-gap: 1.5rem;
 	padding-left: 2.7rem;
+}
+
+.skills__accordion {
+	box-shadow: none;
+	background-color: inherit;
 }
 
 .skills__titles {
