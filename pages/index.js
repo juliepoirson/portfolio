@@ -40,6 +40,18 @@ export default function Home() {
 		setExpanded(isExpanded ? panel : false)
 	}
 
+	const [secondQual, setSecondQual] = useState(true)
+
+	const changeQualFalse = () => {
+		setSecondQual(false)
+		console.log(secondQual)
+	}
+
+	const changeQualTrue = () => {
+		setSecondQual(true)
+		console.log(secondQual)
+	}
+
 	return (
 		<>
 			<Head>
@@ -349,6 +361,7 @@ export default function Home() {
 								<div
 									className='qualification__button button--flex qualification__active'
 									data-target='#education'
+									onClick={changeQualTrue}
 								>
 									<UilGraduationCap className='qualification__icon' />
 									Education
@@ -356,134 +369,140 @@ export default function Home() {
 								<div
 									className='qualification__button button--flex'
 									data-target='#work'
+									onClick={changeQualFalse}
 								>
 									<UilBriefcaseAlt className='qualification__icon' />
 									Work
 								</div>
 							</div>
 							<div className='qualification__sections'>
-								{/* ==================== QUALIFICATION CONTENT 1 ==================== */}
-								<div
-									className='qualification__content qualification__active'
-									data-content
-									id='education'
-								>
-									{/* ==================== QUALIFICATION 1 ==================== */}
-									<div className='qualification__data'>
-										<div>
-											<h3 className='qualification__title'>Law School</h3>
-											<span className='qualification__subtitle'>
-												Nanterre University
-											</span>
-											<div className='qualification__calendar'>
-												<UilCalendarAlt />
-												2018 - 2020
+								{secondQual ? (
+									<div
+										className='qualification__content qualification__active'
+										id='education'
+									>
+										<div className='qualification__data'>
+											<div>
+												<h3 className='qualification__title'>Law School</h3>
+												<span className='qualification__subtitle'>
+													Nanterre University
+												</span>
+												<div className='qualification__calendar'>
+													<UilCalendarAlt />
+													2018 - 2020
+												</div>
+											</div>
+											<div>
+												<span className='qualification__rounder'></span>
+												<span className='qualification__line'></span>
 											</div>
 										</div>
-										<div>
-											<span className='qualification__rounder'></span>
-											<span className='qualification__line'></span>
+
+										<div className='qualification__data'>
+											<div></div>
+
+											<div>
+												<span className='qualification__rounder'></span>
+												<span className='qualification__line'></span>
+											</div>
+
+											<div>
+												<h3 className='qualification__title'>
+													Master in Marketing
+												</h3>
+												<span className='qualification__subtitle'>
+													ESCE Paris
+												</span>
+												<div className='qualification__calendar'>
+													<UilCalendarAlt />
+													2020 - 2023
+												</div>
+											</div>
 										</div>
-									</div>
-
-									{/* ==================== QUALIFICATION 2 ==================== */}
-									<div className='qualification__data'>
-										<div></div>
-
-										<div>
-											<span className='qualification__rounder'></span>
-											<span className='qualification__line'></span>
+										<div className='qualification__data'>
+											<div>
+												<h3 className='qualification__title'>
+													Exchange semester in Kansas (US)
+												</h3>
+												<span className='qualification__subtitle'>
+													Wichita State University
+												</span>
+												<div className='qualification__calendar'>
+													<UilCalendarAlt />
+													2022
+												</div>
+											</div>
+											<div>
+												<span className='qualification__rounder'></span>
+												<span className='qualification__line'></span>
+											</div>
 										</div>
+										<div className='qualification__data'>
+											<div></div>
 
-										<div>
-											<h3 className='qualification__title'>
-												Master in Marketing
-											</h3>
-											<span className='qualification__subtitle'>
-												ESCE Paris
-											</span>
-											<div className='qualification__calendar'>
-												<UilCalendarAlt />
-												2020 - 2023
+											<div>
+												<span className='qualification__rounder'></span>
+											</div>
+
+											<div>
+												<h3 className='qualification__title'>
+													Master in Information Systems, Cybersecurity & Big
+													data
+												</h3>
+												<span className='qualification__subtitle'>
+													ECE Paris
+												</span>
+												<div className='qualification__calendar'>
+													<UilCalendarAlt />
+													2022 - 2024
+												</div>
 											</div>
 										</div>
 									</div>
-									{/* ==================== QUALIFICATION 3 ==================== */}
-									<div className='qualification__data'>
-										<div>
-											<h3 className='qualification__title'>
-												Exchange semester in Kansas (US)
-											</h3>
-											<span className='qualification__subtitle'>
-												Wichita State University
-											</span>
-											<div className='qualification__calendar'>
-												<UilCalendarAlt />
-												2022
+								) : (
+									<div
+										className='qualification__content qualification__active'
+										id='work'
+									>
+										<div className='qualification__data'>
+											<div>
+												<h3 className='qualification__title'>
+													Marketing Assistant
+												</h3>
+												<span className='qualification__subtitle'>
+													Eventtia
+												</span>
+												<div className='qualification__calendar'>
+													<UilCalendarAlt />
+													May - August 2021
+												</div>
+											</div>
+											<div>
+												<span className='qualification__rounder'></span>
+												<span className='qualification__line'></span>
 											</div>
 										</div>
-										<div>
-											<span className='qualification__rounder'></span>
-											<span className='qualification__line'></span>
-										</div>
-									</div>
-									{/* ==================== QUALIFICATION 4 ==================== */}
-									<div className='qualification__data'>
-										<div></div>
+										<div class='qualification__data'>
+											<div></div>
 
-										<div>
-											<span className='qualification__rounder'></span>
-											{/* <!--span className="qualification__line"></span> --> */}
-										</div>
+											<div>
+												<span class='qualification__rounder'></span>
+												<span class='qualification__line'></span>
+											</div>
 
-										<div>
-											<h3 className='qualification__title'>
-												Master in Information Systems, Big data & Analytics
-											</h3>
-											<span className='qualification__subtitle'>ECE Paris</span>
-											<div className='qualification__calendar'>
-												<UilCalendarAlt />
-												2022 - 2024
+											<div>
+												<h3 class='qualification__title'>
+													English teacher and tutor
+												</h3>
+												<span class='qualification__subtitle'>Acadomia</span>
+												<div class='qualification__calendar'>
+													<UilCalendarAlt />
+													Sept 2022 - now
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-								{/* ==================== QUALIFICATION CONTENT 2 ==================== */}
-								<div className='qualification__content' data-content id='work'>
-									{/* ==================== QUALIFICATION 1 ==================== */}
-									<div className='qualification__data'>
-										<div>
-											<h3 className='qualification__title'>
-												Marketing Assistant
-											</h3>
-											<span className='qualification__subtitle'>Eventtia</span>
-											<div className='qualification__calendar'>
-												<UilCalendarAlt />3 months - 2021
-											</div>
-										</div>
-										<div>
-											<span className='qualification__rounder'></span>
-											<span className='qualification__line'></span>
-										</div>
-									</div>
-									{/* <!--==================== QUALIFICATION 2 ====================
-							<div className="qualification__data">
-								<div></div>
-
-								<div>
-									<span className="qualification__rounder"></span>
-									<span className="qualification__line"></span>
-								</div>
-
-								<div>
-									<h3 className="qualification__title">...</h3>
-									<span className="qualification__subtitle"></span>
-									<div className="qualification__calendar">
-										<UilCalendarAlt />
-									</div>
-								</div>
-							</div> --> */}
-								</div>
+								)}
 							</div>
 						</div>
 					</section>
