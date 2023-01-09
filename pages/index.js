@@ -1,13 +1,30 @@
 import Link from 'next/link'
 import Head from 'next/head'
 import Image from 'next/image'
+import { useState } from 'react'
+import AnchorLink from 'react-anchor-link-smooth-scroll-v2'
 import { UilLinkedin } from '@iconscout/react-unicons'
 import { UilGithub } from '@iconscout/react-unicons'
 import { UilMessage } from '@iconscout/react-unicons'
 import { UilMouseAlt } from '@iconscout/react-unicons'
 import { UilArrowDown } from '@iconscout/react-unicons'
 import { UilDownloadAlt } from '@iconscout/react-unicons'
+import { UilAngleDown } from '@iconscout/react-unicons'
+import { UilCrosshair } from '@iconscout/react-unicons'
+import { UilSwatchbook } from '@iconscout/react-unicons'
+import { UilBracketsCurly } from '@iconscout/react-unicons'
+import { UilGraduationCap } from '@iconscout/react-unicons'
+import { UilBriefcaseAlt } from '@iconscout/react-unicons'
+import { UilCalendarAlt } from '@iconscout/react-unicons'
+import { UilArrowRight } from '@iconscout/react-unicons'
+import { UilAngleRightB } from '@iconscout/react-unicons'
+import { UilAngleLeftB } from '@iconscout/react-unicons'
+import { UilPhone } from '@iconscout/react-unicons'
+import { UilEnvelope } from '@iconscout/react-unicons'
+import { UilMapMarker } from '@iconscout/react-unicons'
+import { UilComments } from '@iconscout/react-unicons'
 import portrait from '../assets/portrait.png'
+import resume from '../assets/resume.png'
 
 export default function Home() {
 	return (
@@ -35,7 +52,7 @@ export default function Home() {
 										</p>
 									</Link>
 									<Link
-										href='https://github.com/jujujup'
+										href='https://github.com/juliepoirson'
 										target='_blank'
 										className='home__social-icon'
 									>
@@ -49,7 +66,7 @@ export default function Home() {
 								</div>
 
 								<div className='home__data'>
-									<h1 className='home__title'>Hi, I am Julie</h1>
+									<h1 className='home__title'>Julie Poirson</h1>
 									<h3 className='home__subtitle'>
 										Engineering & marketing student
 									</h3>
@@ -58,7 +75,7 @@ export default function Home() {
 										pursuing a double major in information systems,
 										cybersecurity, data science & marketing.
 									</p>
-									<Link href='/contact' className='button button--flex'>
+									<Link href='#contact' className='button button--flex'>
 										Contact Me
 										<p className='button__icon'>
 											<UilMessage />
@@ -67,8 +84,8 @@ export default function Home() {
 								</div>
 							</div>
 							<div className='home__scroll'>
-								<Link
-									href='/about'
+								<AnchorLink
+									href='#about'
 									className='home__scroll-button button--flex'
 								>
 									<p className='home__scroll-mouse'>
@@ -78,7 +95,7 @@ export default function Home() {
 									<p className='home__scroll-arrow'>
 										<UilArrowDown />
 									</p>
-								</Link>
+								</AnchorLink>
 							</div>
 						</div>
 					</section>
@@ -89,10 +106,20 @@ export default function Home() {
 						<span className='section__subtitle'>My introduction</span>
 
 						<div className='about__container container grid'>
-							<Image alt='' className='about__img' />
+							<Image src={resume} alt='' className='about__img' />
 
 							<div className='about__data'>
-								<p className='about__description'>Highly motivated,</p>
+								<p className='about__description'>
+									Hi, I am Julie, an engineering student with a marketing
+									background!
+									<br />
+									I originally pursued a degree in marketing, and eventually
+									discovered a love for programming.
+									<br />
+									Since my school was offering the possibility to graduate with
+									a double major, I took that opportunity and chose to turn to
+									data science.
+								</p>
 
 								{/* <div className='about__info'>
 									<div>
@@ -139,14 +166,13 @@ export default function Home() {
 							{/* ==================== SKILLS 1 ==================== */}
 							<div className='skills__content skills__open'>
 								<div className='skills__header'>
-									<i className='uil uil-crosshair skills__icon'></i>
+									<UilCrosshair className='skills__icon' />
 
 									<div>
 										<h1 className='skills__title'>Marketing</h1>
 										<span className='skills__subtitle'>2 years</span>
 									</div>
-
-									<i className='uil uil-angle-down skills__arrow'></i>
+									<UilAngleDown className='skills__arrow' />
 								</div>
 
 								<div className='skills__list grid'>
@@ -183,13 +209,13 @@ export default function Home() {
 							{/* ==================== SKILLS 2 ==================== */}
 							<div className='skills__content skills__close'>
 								<div className='skills__header'>
-									<i className='uil uil-swatchbook skills__icon'></i>
+									<UilSwatchbook className='skills__icon' />
 									<div>
 										<h1 className='skills__title'>Graphic Design</h1>
 										<span className='skills__subtitle'> ~About two years</span>
 									</div>
 
-									<i className='uil uil-angle-down skills__arrow'></i>
+									<UilAngleDown className='skills__arrow' />
 								</div>
 
 								<div className='skills__list grid'>
@@ -217,14 +243,14 @@ export default function Home() {
 							{/* ==================== SKILLS 3 ==================== */}
 							<div className='skills__content skills__close'>
 								<div className='skills__header'>
-									<i className='uil uil-brackets-curly skills__icon'></i>
+									<UilBracketsCurly className='skills__icon' />
 
 									<div>
 										<h1 className='skills__title'>Programming</h1>
 										<span className='skills__subtitle'>Less than a year</span>
 									</div>
 
-									<i className='uil uil-angle-down skills__arrow'></i>
+									<UilAngleDown className='skills__arrow' />
 								</div>
 
 								<div className='skills__list grid'>
@@ -269,141 +295,147 @@ export default function Home() {
 						</div>
 					</section>
 					{/* ==================== QUALIFICATION ==================== */}
-					<section class='qualification section'>
-						<h2 class='section__title'>Qualification</h2>
-						<span class='section__subtitle'>My personal journey</span>
+					<section className='qualification section'>
+						<h2 className='section__title'>Qualification</h2>
+						<span className='section__subtitle'>My personal journey</span>
 
-						<div class='qualification__container container'>
-							<div class='qualification__tabs'>
+						<div className='qualification__container container'>
+							<div className='qualification__tabs'>
 								<div
-									class='qualification__button button--flex qualification__active'
+									className='qualification__button button--flex qualification__active'
 									data-target='#education'
 								>
-									<i class='uil uil-graduation-cap qualification__icon'></i>
+									<UilGraduationCap className='qualification__icon' />
 									Education
 								</div>
 
 								<div
-									class='qualification__button button--flex'
+									className='qualification__button button--flex'
 									data-target='#work'
 								>
-									<i class='uil uil-briefcase-alt qualification__icon'></i>
+									<UilBriefcaseAlt className='qualification__icon' />
 									Work
 								</div>
 							</div>
-							<div class='qualification__sections'>
+							<div className='qualification__sections'>
 								{/* ==================== QUALIFICATION CONTENT 1 ==================== */}
 								<div
-									class='qualification__content qualification__active'
+									className='qualification__content qualification__active'
 									data-content
 									id='education'
 								>
 									{/* ==================== QUALIFICATION 1 ==================== */}
-									<div class='qualification__data'>
+									<div className='qualification__data'>
 										<div>
-											<h3 class='qualification__title'>Law School</h3>
-											<span class='qualification__subtitle'>
+											<h3 className='qualification__title'>Law School</h3>
+											<span className='qualification__subtitle'>
 												Nanterre University
 											</span>
-											<div class='qualification__calendar'>
-												<i class='uil uil-calendar-alt'></i>
+											<div className='qualification__calendar'>
+												<UilCalendarAlt />
 												2018 - 2020
 											</div>
 										</div>
 										<div>
-											<span class='qualification__rounder'></span>
-											<span class='qualification__line'></span>
+											<span className='qualification__rounder'></span>
+											<span className='qualification__line'></span>
 										</div>
 									</div>
 
 									{/* ==================== QUALIFICATION 2 ==================== */}
-									<div class='qualification__data'>
+									<div className='qualification__data'>
 										<div></div>
 
 										<div>
-											<span class='qualification__rounder'></span>
-											<span class='qualification__line'></span>
+											<span className='qualification__rounder'></span>
+											<span className='qualification__line'></span>
 										</div>
 
 										<div>
-											<h3 class='qualification__title'>Master in Marketing</h3>
-											<span class='qualification__subtitle'>ESCE Paris</span>
-											<div class='qualification__calendar'>
-												<i class='uil uil-calendar-alt'></i>
+											<h3 className='qualification__title'>
+												Master in Marketing
+											</h3>
+											<span className='qualification__subtitle'>
+												ESCE Paris
+											</span>
+											<div className='qualification__calendar'>
+												<UilCalendarAlt />
 												2020 - 2023
 											</div>
 										</div>
 									</div>
 									{/* ==================== QUALIFICATION 3 ==================== */}
-									<div class='qualification__data'>
+									<div className='qualification__data'>
 										<div>
-											<h3 class='qualification__title'>
+											<h3 className='qualification__title'>
 												Exchange semester in Kansas (US)
 											</h3>
-											<span class='qualification__subtitle'>
+											<span className='qualification__subtitle'>
 												Wichita State University
 											</span>
-											<div class='qualification__calendar'>
-												<i class='uil uil-calendar-alt'></i>
+											<div className='qualification__calendar'>
+												<UilCalendarAlt />
 												2022
 											</div>
 										</div>
 										<div>
-											<span class='qualification__rounder'></span>
-											<span class='qualification__line'></span>
+											<span className='qualification__rounder'></span>
+											<span className='qualification__line'></span>
 										</div>
 									</div>
 									{/* ==================== QUALIFICATION 4 ==================== */}
-									<div class='qualification__data'>
+									<div className='qualification__data'>
 										<div></div>
 
 										<div>
-											<span class='qualification__rounder'></span>
-											{/* <!--span class="qualification__line"></span> --> */}
+											<span className='qualification__rounder'></span>
+											{/* <!--span className="qualification__line"></span> --> */}
 										</div>
 
 										<div>
-											<h3 class='qualification__title'>
+											<h3 className='qualification__title'>
 												Master in Information Systems, Big data & Analytics
 											</h3>
-											<span class='qualification__subtitle'>ECE Paris</span>
-											<div class='qualification__calendar'>
-												<i class='uil uil-calendar-alt'></i>
+											<span className='qualification__subtitle'>ECE Paris</span>
+											<div className='qualification__calendar'>
+												<UilCalendarAlt />
 												2022 - 2024
 											</div>
 										</div>
 									</div>
 								</div>
 								{/* ==================== QUALIFICATION CONTENT 2 ==================== */}
-								<div class='qualification__content' data-content id='work'>
+								<div className='qualification__content' data-content id='work'>
 									{/* ==================== QUALIFICATION 1 ==================== */}
-									<div class='qualification__data'>
+									<div className='qualification__data'>
 										<div>
-											<h3 class='qualification__title'>Marketing Assistant</h3>
-											<span class='qualification__subtitle'>Eventtia</span>
-											<div class='qualification__calendar'>
-												<i class='uil uil-calendar-alt'></i>3 months - 2021
+											<h3 className='qualification__title'>
+												Marketing Assistant
+											</h3>
+											<span className='qualification__subtitle'>Eventtia</span>
+											<div className='qualification__calendar'>
+												<UilCalendarAlt />3 months - 2021
 											</div>
 										</div>
 										<div>
-											<span class='qualification__rounder'></span>
-											<span class='qualification__line'></span>
+											<span className='qualification__rounder'></span>
+											<span className='qualification__line'></span>
 										</div>
 									</div>
 									{/* <!--==================== QUALIFICATION 2 ====================
-							<div class="qualification__data">
+							<div className="qualification__data">
 								<div></div>
 
 								<div>
-									<span class="qualification__rounder"></span>
-									<span class="qualification__line"></span>
+									<span className="qualification__rounder"></span>
+									<span className="qualification__line"></span>
 								</div>
 
 								<div>
-									<h3 class="qualification__title">...</h3>
-									<span class="qualification__subtitle"></span>
-									<div class="qualification__calendar">
-										<i class="uil uil-calendar-alt"></i>
+									<h3 className="qualification__title">...</h3>
+									<span className="qualification__subtitle"></span>
+									<div className="qualification__calendar">
+										<UilCalendarAlt />
 									</div>
 								</div>
 							</div> --> */}
@@ -412,152 +444,155 @@ export default function Home() {
 						</div>
 					</section>
 					{/* ==================== PORTFOLIO ==================== */}
-					<section class='portfolio section' id='portfolio'>
-						<h2 class='section__title'>Portfolio</h2>
-						<span class='section__subtitle'>Most recent work</span>
+					<section className='portfolio section' id='portfolio'>
+						<h2 className='section__title'>Portfolio</h2>
+						<span className='section__subtitle'>Most recent work</span>
 
-						<div class='portfolio__container container swiper-container'>
-							<div class='swiper-wrapper'>
+						<div className='portfolio__container container swiper-container'>
+							<div className='swiper-wrapper'>
 								{/* ==================== PORTFOLIO 1 ==================== */}
-								<div class='portfolio__content grid swiper-slide'>
+								<div className='portfolio__content grid swiper-slide'>
 									<img
 										src='assets/img/portfolio1.jpg'
 										alt=''
-										class='portfolio__img'
+										className='portfolio__img'
 									/>
 
-									<div class='portfolio__data'>
-										<h3 class='portfolio__title'>Modern Website</h3>
-										<p class='portfolio__description'>description</p>
+									<div className='portfolio__data'>
+										<h3 className='portfolio__title'>Modern Website</h3>
+										<p className='portfolio__description'>description</p>
 										<a
 											href='#'
-											class='button button--flex button--small portfolio__button'
+											className='button button--flex button--small portfolio__button'
 										>
 											Demo
-											<i class='uil uil-arrow-right button__icon'></i>
+											<UilArrowRight className='button__icon' />
 										</a>
 									</div>
 								</div>
 								{/* ==================== PORTFOLIO 2 ==================== */}
-								<div class='portfolio__content grid swiper-slide'>
+								<div className='portfolio__content grid swiper-slide'>
 									<img
 										src='assets/img/portfolio2.jpg'
 										alt=''
-										class='portfolio__img'
+										className='portfolio__img'
 									/>
 
-									<div class='portfolio__data'>
-										<h3 class='portfolio__title'>Brand design</h3>
-										<p class='portfolio__description'>description</p>
+									<div className='portfolio__data'>
+										<h3 className='portfolio__title'>Brand design</h3>
+										<p className='portfolio__description'>description</p>
 										<a
 											href='#'
-											class='button button--flex button--small portfolio__button'
+											className='button button--flex button--small portfolio__button'
 										>
 											Demo
-											<i class='uil uil-arrow-right button__icon'></i>
+											<UilArrowRight className='button__icon' />
 										</a>
 									</div>
 								</div>
 								{/* ==================== PORTFOLIO 3 ==================== */}
-								<div class='portfolio__content grid swiper-slide'>
+								<div className='portfolio__content grid swiper-slide'>
 									<img
 										src='assets/img/portfolio3.jpg'
 										alt=''
-										class='portfolio__img'
+										className='portfolio__img'
 									/>
 
-									<div class='portfolio__data'>
-										<h3 class='portfolio__title'>Online Store</h3>
-										<p class='portfolio__description'>description</p>
+									<div className='portfolio__data'>
+										<h3 className='portfolio__title'>Online Store</h3>
+										<p className='portfolio__description'>description</p>
 										<a
 											href='#'
-											class='button button--flex button--small portfolio__button'
+											className='button button--flex button--small portfolio__button'
 										>
 											Demo
-											<i class='uil uil-arrow-right button__icon'></i>
+											<UilArrowRight className='button__icon' />
 										</a>
 									</div>
 								</div>
 							</div>
 							{/* <!-- Add arrows--> */}
-							<div class='swiper-button-next'>
-								<i class='uil uil-angle-right-b swiper-portfolio-icon'></i>
+							<div className='swiper-button-next'>
+								<UilAngleRightB className='swiper-portfolio-icon' />
 							</div>
-							<div class='swiper-button-prev'>
-								<i class='uil uil-angle-left-b swiper-portfolio-icon'></i>
+							<div className='swiper-button-prev'>
+								<UilAngleLeftB className='swiper-portfolio-icon' />
 							</div>
 
 							{/* <!-- Add pagination--> */}
-							<div class='swiper-pagination'></div>
+							<div className='swiper-pagination'></div>
 						</div>
 					</section>
 
 					{/* ==================== PROJECT IN MIND ==================== */}
-					<section class='project section'>
-						<div class='project__bg'>
-							<div class='project__container container grid'>
-								<div class='project__data'>
-									<h2 class='project__title'>Looking for an intern?</h2>
-									<p class='project__description'>
+					<section className='project section'>
+						<div className='project__bg'>
+							<div className='project__container container grid'>
+								<div className='project__data'>
+									<h2 className='project__title'>Looking for an intern?</h2>
+									<p className='project__description'>
 										Don't hesitate to reach out!
 									</p>
-									<a href='#' class='button button--flex button--white'>
+									<a href='#' className='button button--flex button--white'>
 										Contact Me
-										<i class='uil uil-message project__icon button__icon'></i>
+										<UilMessage className='project__icon button__icon' />
 									</a>
 								</div>
+								<UilComments className='project__img' />
 							</div>
 						</div>
 					</section>
 
 					{/* ==================== CONTACT ME ==================== */}
-					<section class='contact section' id='contact'>
-						<h2 class='section__title'>Contact me</h2>
-						<span class='section__subtitle'>Let's get in touch!</span>
+					<section className='contact section' id='contact'>
+						<h2 className='section__title'>Contact me</h2>
+						<span className='section__subtitle'>Let's get in touch!</span>
 
-						<div class='contact__container container grid'>
+						<div className='contact__container container grid'>
 							<div>
-								<div class='contact__information'>
-									<i class='uil uil-phone contact__icon'></i>
+								<div className='contact__information'>
+									<UilPhone className='contact__icon' />
 
 									<div>
-										<h3 class='contact__title'>Call me</h3>
-										<span class='contact__subtitle'>+33 6 95 27 16 80</span>
+										<h3 className='contact__title'>Call me</h3>
+										<span className='contact__subtitle'>+33 6 95 27 16 80</span>
 									</div>
 								</div>
-								<div class='contact__information'>
-									<i class='uil uil-envelope contact__icon'></i>
+								<div className='contact__information'>
+									<UilEnvelope className='contact__icon'></UilEnvelope>
 
 									<div>
-										<h3 class='contact__title'>Email</h3>
-										<span class='contact__subtitle'>julie.lp273@gmail.com</span>
+										<h3 className='contact__title'>Email</h3>
+										<span className='contact__subtitle'>
+											julie.lp273@gmail.com
+										</span>
 									</div>
 								</div>
-								<div class='contact__information'>
-									<i class='uil uil-map-marker contact__icon'></i>
+								<div className='contact__information'>
+									<UilMapMarker className='contact__icon'></UilMapMarker>
 									<div>
-										<h3 class='contact__title'>Location</h3>
-										<span class='contact__subtitle'>Paris - France</span>
+										<h3 className='contact__title'>Location</h3>
+										<span className='contact__subtitle'>Paris - France</span>
 									</div>
 								</div>
 							</div>
-							<form action='' class='contact__form grid'>
-								<div class='contact__inputs grid'>
-									<div class='contact__content'>
-										<label for='' class='contact__label'>
+							<form action='' className='contact__form grid'>
+								<div className='contact__inputs grid'>
+									<div className='contact__content'>
+										<label for='' className='contact__label'>
 											Name
 										</label>
-										<input type='text' class='contact__input' />
+										<input type='text' className='contact__input' />
 									</div>
-									<div class='contact__content'>
-										<label for='' class='contact__label'>
+									<div className='contact__content'>
+										<label for='' className='contact__label'>
 											Email
 										</label>
-										<input type='email' class='contact__input' />
+										<input type='email' className='contact__input' />
 									</div>
 								</div>
-								<div class='contact__content'>
-									<label for='' class='contact__label'>
+								<div className='contact__content'>
+									<label for='' className='contact__label'>
 										Message
 									</label>
 									<textarea
@@ -565,14 +600,14 @@ export default function Home() {
 										id=''
 										cols='0'
 										rows='7'
-										class='contact__input'
+										className='contact__input'
 									></textarea>
 								</div>
 
 								<div>
-									<a href='' class='button button--flex'>
+									<a href='' className='button button--flex'>
 										Send Message
-										<i class='uil uil-message button__icon'></i>
+										<UilMessage className='button__icon'></UilMessage>
 									</a>
 								</div>
 							</form>
