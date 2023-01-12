@@ -1,5 +1,8 @@
 import Link from 'next/link'
+import AnchorLink from 'react-anchor-link-smooth-scroll-v2'
+
 import { UilLinkedin } from '@iconscout/react-unicons'
+import { UilGithub } from '@iconscout/react-unicons'
 
 export default function Footer() {
 	return (
@@ -13,19 +16,19 @@ export default function Footer() {
 
 					<ul className='footer__links'>
 						<li>
-							<Link href='/skills'>
+							<AnchorLink href='#skills'>
 								<div className='footer__link'>Skills</div>
-							</Link>
+							</AnchorLink>
 						</li>
 						<li>
-							<Link href='/portfolio'>
+							<AnchorLink href='#portfolio'>
 								<div className='footer__link'>Portfolio</div>
-							</Link>
+							</AnchorLink>
 						</li>
 						<li>
-							<Link href='/contact'>
+							<AnchorLink href='#contact'>
 								<div className='footer__link'>ContactMe</div>
-							</Link>
+							</AnchorLink>
 						</li>
 					</ul>
 
@@ -36,6 +39,15 @@ export default function Footer() {
 						>
 							<div className='footer__social'>
 								<UilLinkedin />
+							</div>
+						</Link>
+						<Link
+							href='https://github.com/juliepoirson'
+							target='_blank'
+							className='home__social-icon'
+						>
+							<div className='footer__social'>
+								<UilGithub />
 							</div>
 						</Link>
 					</div>

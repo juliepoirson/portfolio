@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import AnchorLink from 'react-anchor-link-smooth-scroll-v2'
+import { useState, useEffect } from 'react'
 import { UilGlobe } from '@iconscout/react-unicons'
 
 export default function Header() {

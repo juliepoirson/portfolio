@@ -123,6 +123,12 @@ img {
 	color: var(--title-color);
 }
 
+.section__title2 {
+	font-size: var(--h3-font-size);
+	color: var(--title-color);
+	margin-bottom: 10px;
+}
+
 .section__subtitle {
 	display: block;
 	font-size: var(--small-font-size);
@@ -330,6 +336,7 @@ img {
 
 .home__scroll-arrow {
 	font-size: 1.25rem;
+	margin-top: 5%;
 }
 
 /*==================== BUTTONS ====================*/
@@ -351,6 +358,13 @@ img {
 	font-size: 1.25rem;
 	margin-left: var(--mb-0-5);
 	transition: 0.3s;
+}
+
+.button__icon--home {
+	font-size: 1.25rem;
+	margin-left: var(--mb-0-5);
+	transition: 0.3s;
+	margin-top: 5%;
 }
 
 .button--white {
@@ -579,6 +593,7 @@ img {
 .qualification__calendar {
 	font-size: var(--small-font-size);
 	color: var(--text-color-light);
+	vertical-align: text-bottom;
 }
 
 .qualification__rounder {
@@ -609,18 +624,24 @@ img {
 	color: var(--first-color);
 }
 
-/*==================== SERVICES ====================*/
-
-/* Active Modal */
-
 /*==================== PORTFOLIO ====================*/
 
 .portfolio__container {
-	overflow: initial;
+	display: flex;
+	flex-direction: row;
 }
 
 .portfolio__content {
 	padding: 0 1.5rem;
+}
+
+.portfolio__card {
+	border: solid var(--first-color);
+	border-radius: 20px;
+	margin: 5% 5%;
+	padding: 5%;
+	height: 400px;
+	width: 300px;
 }
 
 .portfolio__img {
@@ -672,6 +693,36 @@ img {
 .swiper-button-next,
 .swiper-pagination-bullets {
 	outline: none;
+}
+
+/*==================== PORTFOLIO PROJECTS ====================*/
+
+.portfolioproject__section {
+	margin-top: 8%;
+	padding: 2rem 0 4rem;
+}
+
+.portfolioproject__text {
+	line-height: 25px;
+	margin-bottom: 10px;
+}
+
+.portfolioproject__img {
+	width: 400px;
+	border-radius: 0.5rem;
+	justify-self: center;
+	align-self: center;
+}
+
+.paragraph__right {
+	text-align: end;
+}
+
+.portfolioproject__icon {
+	font-size: 2rem;
+	color: var(--first-color);
+	vertical-align: sub;
+	margin: 0 10px;
 }
 
 /*==================== PROJECT IN MIND ====================*/
@@ -892,6 +943,13 @@ img {
 	.project__img {
 		width: 200px;
 	}
+
+	.qualification__calendar--left {
+		left: 55%;
+	}
+	.qualification__calendar--right {
+		left: 60%;
+	}
 }
 
 /* For medium devices */
@@ -912,6 +970,7 @@ img {
 	.portfolio__content,
 	.project__container,
 	.contact__container,
+	.portfolioproject__container,
 	.footer__container {
 		grid-template-columns: repeat(2, 1fr);
 	}
@@ -920,6 +979,13 @@ img {
 		display: grid;
 		grid-template-columns: 0.6fr;
 		justify-content: center;
+	}
+
+	.qualification__calendar--left {
+		left: -25%;
+	}
+	.qualification__calendar--right {
+		left: 64%;
 	}
 }
 
@@ -1016,12 +1082,20 @@ img {
 	.qualification__sections {
 		grid-template-columns: 0.5fr;
 	}
+	.qualification__calendar--right {
+		left: 60%;
+	}
 
 	.portfolio__img {
 		width: 320px;
 	}
 	.portfolio__content {
 		align-items: center;
+	}
+
+	.portfolioproject__container {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
 	}
 
 	.project {
@@ -1054,8 +1128,13 @@ img {
 		padding-top: 0.9rem;
 	}
 	.footer__socials {
+		display: flex;
 		justify-self: flex-end;
 		padding-top: 0.9rem;
+		flex-direction: row;
+	}
+	.footer__social {
+		margin-right: 10px;
 	}
 	.footer__copy {
 		margin-top: 4.5rem;
