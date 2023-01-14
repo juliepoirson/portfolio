@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 import knc from '../assets/knc.png'
+import piechart from '../assets/piechart2.png'
+import graph from '../assets/graph.png'
 
 import { UilCrosshair } from '@iconscout/react-unicons'
 import { UilQuestionCircle } from '@iconscout/react-unicons'
@@ -88,15 +90,16 @@ export default function Home() {
 								Survey methods
 							</h3>
 							<p className='portfolioproject__text'>
-								Survey created by collaboration between MKT 403 students in
-								spring 2022.
+								A <strong>survey</strong> was created by collaboration between
+								MKT 403 students in spring 2022 and was sent via email.
 							</p>
 							<p className='portfolioproject__text'>
-								Target population: All nonprofit members subscribed to the
-								Kansas Nonprofit Chamber email list
+								<strong>Target population:</strong> All nonprofit members
+								subscribed to the Kansas Nonprofit Chamber email list
 							</p>
 							<p className='portfolioproject__text'>
-								Sampling Frame: Kansas Nonprofit Chamber email list (N=2,600)
+								<strong>Sampling Frame:</strong> Kansas Nonprofit Chamber email
+								list (N=2,600)
 							</p>
 							<p className='portfolioproject__text'>
 								Minimize coverage, measurement, and nonresponse error by:
@@ -112,6 +115,14 @@ export default function Home() {
 								- Dividing length of operation status into intervals
 								<br />- Reviewing questions by students, professor, and client
 							</p>
+						</div>
+						<div className='portfolioproject__container container'>
+							<h2 className='section__title2'>
+								Results of how nonprofits perceive the importance of cost of
+								membership fee as a reason for not being a member:
+							</h2>
+							<Image src={piechart} alt='' />
+							<Image src={graph} alt='' />
 						</div>
 					</section>
 				</main>
