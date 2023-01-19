@@ -1,10 +1,14 @@
 import Link from 'next/link'
 import AnchorLink from 'react-anchor-link-smooth-scroll-v2'
 
+import { useRouter } from 'next/router'
+
 import { UilLinkedin } from '@iconscout/react-unicons'
 import { UilGithub } from '@iconscout/react-unicons'
 
 export default function Footer() {
+	const { asPath } = useRouter()
+
 	return (
 		<footer className='footer'>
 			<div className='footer__bg'>
@@ -16,19 +20,37 @@ export default function Footer() {
 
 					<ul className='footer__links'>
 						<li>
-							<AnchorLink href='#skills'>
-								<div className='footer__link'>Skills</div>
-							</AnchorLink>
+							{asPath !== '/kncproject' ? (
+								<AnchorLink href='#skills'>
+									<div className='footer__link'>Skills</div>
+								</AnchorLink>
+							) : (
+								<Link href='/#skills'>
+									<div className='footer__link'>Skills</div>
+								</Link>
+							)}
 						</li>
 						<li>
-							<AnchorLink href='#portfolio'>
-								<div className='footer__link'>Portfolio</div>
-							</AnchorLink>
+							{asPath !== '/kncproject' ? (
+								<AnchorLink href='#portfolio'>
+									<div className='footer__link'>Portfolio</div>
+								</AnchorLink>
+							) : (
+								<Link href='/#portfolio'>
+									<div className='footer__link'>Portfolio</div>
+								</Link>
+							)}
 						</li>
 						<li>
-							<AnchorLink href='#contact'>
-								<div className='footer__link'>ContactMe</div>
-							</AnchorLink>
+							{asPath !== '/kncproject' ? (
+								<AnchorLink href='#contact'>
+									<div className='footer__link'>Contact</div>
+								</AnchorLink>
+							) : (
+								<Link href='/#contact'>
+									<div className='footer__link'>Contact</div>
+								</Link>
+							)}
 						</li>
 					</ul>
 

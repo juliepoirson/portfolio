@@ -124,6 +124,12 @@ img {
 }
 
 .section__title2 {
+	font-size: var(--h2-font-size);
+	color: var(--title-color);
+	margin-bottom: 10px;
+}
+
+.section__title3 {
 	font-size: var(--h3-font-size);
 	color: var(--title-color);
 	margin-bottom: 10px;
@@ -177,7 +183,14 @@ img {
 	font-weight: var(--font-medium);
 }
 
-.nav__logo:hover {
+.nav__arrow {
+	color: var(--title-color);
+	transform: scale(1.5);
+	margin-top: 3%;
+}
+
+.nav__logo:hover,
+.nav__arrow:hover {
 	color: var(--first-color);
 }
 
@@ -379,6 +392,9 @@ img {
 .button--flex {
 	display: inline-flex;
 	align-items: center;
+	border-style: none;
+	font-family: var(--body-font);
+	font-size: var(--normal-font-size);
 }
 
 /*==================== ABOUT ====================*/
@@ -501,7 +517,7 @@ img {
 }
 
 .skills__inbound {
-	width: 80%;
+	width: 60%;
 }
 
 .skills__research {
@@ -645,9 +661,12 @@ img {
 }
 
 .portfolio__img {
-	width: 265px;
 	border-radius: 0.5rem;
 	justify-self: center;
+}
+
+.portfolio__data1 {
+	margin-top: 13%;
 }
 
 .portfolio__title {
@@ -659,47 +678,24 @@ img {
 	margin-bottom: var(--mb-0-75);
 }
 
-.portfolio__button:hover .button__icon {
+.portfolio__button:hover .button__icon,
+.portfolio__button1:hover .button__icon {
 	transform: translate(0.25rem);
 }
 
-.swiper-button-prev::after,
-.swiper-button-next::after {
-	content: '';
-}
-
-.swiper-portfolio-icon {
-	font-size: 2rem;
-	color: var(--first-color);
-}
-
-.swiper-button-prev {
-	left: -0.5rem;
-}
-
-.swiper-button-next {
-	right: -0.5rem;
-}
-
-.swiper-container-horizontal > .swiper-pagination-bullets {
-	bottom: -2.5rem;
-}
-
-.swiper-pagination-bullets-active {
-	background-color: var(--first-color);
-}
-
-.swiper-button-prev,
-.swiper-button-next,
-.swiper-pagination-bullets {
-	outline: none;
+.portfolio__button1 {
+	margin-top: 11%;
 }
 
 /*==================== PORTFOLIO PROJECTS ====================*/
 
 .portfolioproject__section {
-	margin-top: 8%;
+	margin-top: 6%;
 	padding: 2rem 0 4rem;
+}
+
+.portfolioproject__home {
+	margin: auto auto 20% auto;
 }
 
 .portfolioproject__text {

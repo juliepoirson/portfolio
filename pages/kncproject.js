@@ -2,8 +2,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 import knc from '../assets/knc.png'
-import piechart from '../assets/piechart2.png'
-import graph from '../assets/graph.png'
 
 import { UilCrosshair } from '@iconscout/react-unicons'
 import { UilQuestionCircle } from '@iconscout/react-unicons'
@@ -21,13 +19,13 @@ export default function Home() {
 			<div className='body'>
 				<main className='main'>
 					<section className='portfolioproject__section'>
-						<h2 className='section__title'>KNC project</h2>
+						<h1 className='section__title'>KNC project</h1>
 						<span className='section__subtitle'>
 							Marketing research project
 						</span>
 						<div className='portfolioproject__container container grid'>
 							<Image src={knc} className='portfolioproject__img' />
-							<div className='portfolioproject__data'>
+							<div className='portfolioproject__home'>
 								<p className='portfolioproject__text'>
 									In the spring semester of 2022, I had the opportunity to
 									conduct a study for an organization my Marketing Research
@@ -53,10 +51,10 @@ export default function Home() {
 							</div>
 						</div>
 						<div className='portfolioproject__container container'>
-							<h3 className='section__title2'>
+							<h2 className='section__title2'>
 								<UilCrosshair className='portfolioproject__icon' />
 								Our goals were to:
-							</h3>
+							</h2>
 							<p className='portfolioproject__text'>
 								- Provide insight into how nonprofits are faring in this
 								economy,
@@ -70,10 +68,10 @@ export default function Home() {
 							</p>
 						</div>
 						<div className='portfolioproject__container container paragraph__right'>
-							<h3 className='section__title2'>
+							<h2 className='section__title2'>
 								We formulated two hypotheses:
 								<UilQuestionCircle className='portfolioproject__icon' />
-							</h3>
+							</h2>
 							<p className='portfolioproject__text'>
 								<strong>1.</strong> Non-members rate the importance of the cost
 								of membership at least a 4 on a 5 point-scale.
@@ -85,10 +83,10 @@ export default function Home() {
 							</p>
 						</div>
 						<div className='portfolioproject__container container'>
-							<h3 className='section__title2'>
+							<h2 className='section__title2'>
 								<UilNotes className='portfolioproject__icon' />
 								Survey methods
-							</h3>
+							</h2>
 							<p className='portfolioproject__text'>
 								A <strong>survey</strong> was created by collaboration between
 								MKT 403 students in spring 2022 and was sent via email.
@@ -118,12 +116,38 @@ export default function Home() {
 						</div>
 						<div className='portfolioproject__container container'>
 							<h2 className='section__title2'>
+								<UilNotes className='portfolioproject__icon' />
+								About the Kansas Nonprofit Chamber (KNC)
+							</h2>
+							<p className='portfolioproject__text'>
+								The <strong>Kansas Nonprofit Chamber (KNC)</strong> is an
+								organization focusing on supporting nonprofits across Kansas.
+							</p>
+							<p className='portfolioproject__text'>
+								The KNC offers a number of programs and services dedicated to
+								helping nonprofits statewide to grow and reach their individual
+								goals.
+							</p>
+							<p className='portfolioproject__text'>
+								With the large amount of services offered to new and established
+								nonprofits these can be categorized into three primary sections:
+								collaborative, education, and advocacy services.
+							</p>
+							<p className='portfolioproject__text'>
+								With all the programs and services provided by the KNC the
+								organization feels they are lacking the proper feedback from its
+								current and prospective members which is why they came to us.
+							</p>
+						</div>
+						{/* <div className='portfolioproject__container container'>
+							<h3 className='section__title3'>
+								<UilAnalytics className='portfolioproject__icon' />
 								Results of how nonprofits perceive the importance of cost of
 								membership fee as a reason for not being a member:
-							</h2>
+							</h3>
 							<Image src={piechart} alt='' />
 							<Image src={graph} alt='' />
-						</div>
+						</div> */}
 					</section>
 				</main>
 			</div>

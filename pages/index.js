@@ -12,6 +12,7 @@ import AccordionSummary from '@mui/material/AccordionSummary'
 import portrait from '../assets/portrait.png'
 import resume from '../assets/resume.png'
 import knc from '../assets/knc.png'
+import webapp from '../assets/webapp.png'
 
 import { UilLinkedin } from '@iconscout/react-unicons'
 import { UilGithub } from '@iconscout/react-unicons'
@@ -27,12 +28,11 @@ import { UilGraduationCap } from '@iconscout/react-unicons'
 import { UilBriefcaseAlt } from '@iconscout/react-unicons'
 import { UilCalendarAlt } from '@iconscout/react-unicons'
 import { UilArrowRight } from '@iconscout/react-unicons'
-import { UilAngleRightB } from '@iconscout/react-unicons'
-import { UilAngleLeftB } from '@iconscout/react-unicons'
 import { UilPhone } from '@iconscout/react-unicons'
 import { UilEnvelope } from '@iconscout/react-unicons'
 import { UilMapMarker } from '@iconscout/react-unicons'
 import { UilComments } from '@iconscout/react-unicons'
+import { UilRobot } from '@iconscout/react-unicons'
 
 export default function Home() {
 	const [expanded, setExpanded] = useState(false)
@@ -101,12 +101,12 @@ export default function Home() {
 										pursuing a double major in information systems,
 										cybersecurity, data science & marketing.
 									</p>
-									<Link href='#contact' className='button button--flex'>
+									<AnchorLink href='#contact' className='button button--flex'>
 										Contact Me
 										<p className='button__icon--home'>
 											<UilMessage />
 										</p>
-									</Link>
+									</AnchorLink>
 								</div>
 							</div>
 							<div className='home__scroll'>
@@ -193,14 +193,14 @@ export default function Home() {
 								<div>
 									{/* ==================== SKILLS 1 ==================== */}
 									<Accordion
-										expanded={expanded === 'panel3'}
-										onChange={handleChange('panel3')}
+										expanded={expanded === 'panel1'}
+										onChange={handleChange('panel1')}
 										className='skills__accordion'
 									>
 										<AccordionSummary
 											expandIcon={<UilAngleDown className='skills__arrow' />}
-											aria-controls='panel3bh-content'
-											id='panel3bh-header'
+											aria-controls='panel1bh-content'
+											id='panel1bh-header'
 										>
 											<div className='skills__header'>
 												<UilBracketsCurly className='skills__icon' />
@@ -234,7 +234,7 @@ export default function Home() {
 												</div>
 												<div className='skills__data'>
 													<div className='skills__titles'>
-														<h3 className='skills__name'>HTML</h3>
+														<h3 className='skills__name'>HTML/CSS</h3>
 														<span className='skills__number'>30%</span>
 													</div>
 													<div className='skills__bar'>
@@ -250,19 +250,86 @@ export default function Home() {
 														<span className='skills__percentage skills__python'></span>
 													</div>
 												</div>
+												<div className='skills__data'>
+													<div className='skills__titles'>
+														<h3 className='skills__name'>Experience with:</h3>
+													</div>
+													<p className='skills__experience'>
+														NoSQL, JavaScript, C#
+													</p>
+												</div>
 											</div>
 										</AccordionDetails>
 									</Accordion>
 									{/* ==================== SKILLS 2 ==================== */}
 									<Accordion
-										expanded={expanded === 'panel1'}
-										onChange={handleChange('panel1')}
+										expanded={expanded === 'panel2'}
+										onChange={handleChange('panel2')}
 										className='skills__accordion'
 									>
 										<AccordionSummary
 											expandIcon={<UilAngleDown className='skills__arrow' />}
-											aria-controls='panel1bh-content'
-											id='panel1bh-header'
+											aria-controls='panel2bh-content'
+											id='panel2bh-header'
+										>
+											<div className='skills__header'>
+												<UilRobot className='skills__icon' />
+												<div>
+													<h1 className='skills__title'>Technologies</h1>
+													<span className='skills__subtitle'>
+														Less than a year
+													</span>
+												</div>
+											</div>
+										</AccordionSummary>
+										<AccordionDetails>
+											<div className='skills__list grid'>
+												<div className='skills__data'>
+													<div className='skills__titles'>
+														<h3 className='skills__name'>Git</h3>
+														<span className='skills__number'>60%</span>
+													</div>
+													<div className='skills__bar'>
+														<span className='skills__percentage skills__inbound'></span>
+													</div>
+												</div>
+												<div className='skills__data'>
+													<div className='skills__titles'>
+														<h3 className='skills__name'>MySQL</h3>
+														<span className='skills__number'>30%</span>
+													</div>
+													<div className='skills__bar'>
+														<span className='skills__percentage skills__research'></span>
+													</div>
+												</div>
+												<div className='skills__data'>
+													<div className='skills__titles'>
+														<h3 className='skills__name'>React</h3>
+														<span className='skills__number'>40%</span>
+													</div>
+													<div className='skills__bar'>
+														<span className='skills__percentage skills__hubspot'></span>
+													</div>
+												</div>
+												<div className='skills__data'>
+													<div className='skills__titles'>
+														<h3 className='skills__name'>Experience with:</h3>
+													</div>
+													<p className='skills__experience'>MongoDB</p>
+												</div>
+											</div>
+										</AccordionDetails>
+									</Accordion>
+									{/* ==================== SKILLS 3 ==================== */}
+									<Accordion
+										expanded={expanded === 'panel3'}
+										onChange={handleChange('panel3')}
+										className='skills__accordion'
+									>
+										<AccordionSummary
+											expandIcon={<UilAngleDown className='skills__arrow' />}
+											aria-controls='panel3bh-content'
+											id='panel3bh-header'
 										>
 											<div className='skills__header'>
 												<UilCrosshair className='skills__icon' />
@@ -277,7 +344,7 @@ export default function Home() {
 												<div className='skills__data'>
 													<div className='skills__titles'>
 														<h3 className='skills__name'>Inbound Marketing</h3>
-														<span className='skills__number'>80%</span>
+														<span className='skills__number'>60%</span>
 													</div>
 													<div className='skills__bar'>
 														<span className='skills__percentage skills__inbound'></span>
@@ -304,23 +371,23 @@ export default function Home() {
 											</div>
 										</AccordionDetails>
 									</Accordion>
-									{/* ==================== SKILLS 3 ==================== */}
+									{/* ==================== SKILLS 4 ==================== */}
 									<Accordion
-										expanded={expanded === 'panel2'}
-										onChange={handleChange('panel2')}
+										expanded={expanded === 'panel4'}
+										onChange={handleChange('panel4')}
 										className='skills__accordion'
 									>
 										<AccordionSummary
 											expandIcon={<UilAngleDown className='skills__arrow' />}
-											aria-controls='panel2bh-content'
-											id='panel2bh-header'
+											aria-controls='panel4bh-content'
+											id='panel4bh-header'
 										>
 											<div className='skills__header'>
 												<UilSwatchbook className='skills__icon' />
 												<div>
 													<h1 className='skills__title'>Graphic Design</h1>
 													<span className='skills__subtitle'>
-														~About two years
+														~ About two years
 													</span>
 												</div>
 											</div>
@@ -518,38 +585,38 @@ export default function Home() {
 						<span className='section__subtitle'>Most recent work</span>
 						<div className='portfolio__container container'>
 							<div className='portfolio__content portfolio__card'>
-								<Image src={knc} alt='' />
+								<Image src={knc} alt='project1' className='portfolio__img' />
 								<div>
-									<div className='portfolio__data'>
+									<div className='portfolio__data1'>
 										<h3 className='portfolio__title'>KNC project</h3>
 										<p className='portfolio__description'>
-											Marketing research project carried out on the Kansas
-											Nonprofit Chamber
+											<strong>Marketing research</strong> project carried out on
+											the Kansas Nonprofit Chamber.
 										</p>
-										<a
-											href='/project1'
-											className='button button--flex button--small portfolio__button'
-										>
-											Check it out!
-											<UilArrowRight className='button__icon'></UilArrowRight>
-										</a>
 									</div>
+									<a
+										href='/kncproject'
+										className='button button--flex button--small portfolio__button1'
+									>
+										Check it out!
+										<UilArrowRight className='button__icon'></UilArrowRight>
+									</a>
 								</div>
 							</div>
 							<div className='portfolio__content portfolio__card'>
-								{/* <Card.Img variant='top' src='holder.js/100px180' /> */}
+								<Image src={webapp} alt='project2' className='portfolio__img' />
 								<div>
 									<div className='portfolio__data'>
-										<h3 className='portfolio__title'>Modern Website</h3>
-										<p className='portfolio__description'>description</p>
-										<a
-											href='#'
-											className='button button--flex button--small portfolio__button'
-										>
-											Check it out!
-											<UilArrowRight className='button__icon'></UilArrowRight>
-										</a>
+										<h3 className='portfolio__title'>Blog</h3>
+										<p className='portfolio__description'>
+											<strong>Web application</strong> in the form of a blog.
+											<br /> Created with React and NextJS.
+										</p>
 									</div>
+									<a className='button button--flex button--small portfolio__button'>
+										Coming soon
+										<UilArrowRight className='button__icon'></UilArrowRight>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -588,19 +655,27 @@ export default function Home() {
 									</div>
 								</div>
 							</div>
-							<form action='' className='contact__form grid'>
+							<form
+								action='https://formsubmit.co/julie.lp273@gmail.com'
+								method='POST'
+								className='contact__form grid'
+							>
 								<div className='contact__inputs grid'>
 									<div className='contact__content'>
 										<label for='' className='contact__label'>
 											Name
 										</label>
-										<input type='text' className='contact__input' />
+										<input type='text' name='name' className='contact__input' />
 									</div>
 									<div className='contact__content'>
 										<label for='' className='contact__label'>
 											Email
 										</label>
-										<input type='email' className='contact__input' />
+										<input
+											type='email'
+											name='email'
+											className='contact__input'
+										/>
 									</div>
 								</div>
 								<div className='contact__content'>
@@ -608,7 +683,7 @@ export default function Home() {
 										Message
 									</label>
 									<textarea
-										name=''
+										name='message'
 										id=''
 										cols='0'
 										rows='7'
@@ -617,10 +692,10 @@ export default function Home() {
 								</div>
 
 								<div>
-									<a href='' className='button button--flex'>
-										Send Message
+									<button type='submit' className='button button--flex'>
+										Send message
 										<UilMessage className='button__icon'></UilMessage>
-									</a>
+									</button>
 								</div>
 							</form>
 						</div>
