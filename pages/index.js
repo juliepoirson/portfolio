@@ -56,7 +56,7 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>Julie Poirson's portfolio</title>
+				<title>Julie Poirson&apos;s portfolio</title>
 				<meta name='description' content='homepage' />
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='icon' href='/favicon.ico' />
@@ -88,7 +88,7 @@ export default function Home() {
 									</Link>
 								</div>
 								<div className='home__img'>
-									<Image src={portrait} />
+									<Image src={portrait} alt='portrait' />
 								</div>
 
 								<div className='home__data'>
@@ -594,13 +594,13 @@ export default function Home() {
 											the Kansas Nonprofit Chamber.
 										</p>
 									</div>
-									<a
+									<Link
 										href='/kncproject'
 										className='button button--flex button--small portfolio__button1'
 									>
 										Check it out!
 										<UilArrowRight className='button__icon'></UilArrowRight>
-									</a>
+									</Link>
 								</div>
 							</div>
 							<div className='portfolio__content portfolio__card'>
@@ -625,7 +625,7 @@ export default function Home() {
 					{/* ==================== CONTACT ME ==================== */}
 					<section className='contact section' id='contact'>
 						<h2 className='section__title'>Contact me</h2>
-						<span className='section__subtitle'>Let's get in touch!</span>
+						<span className='section__subtitle'>Let&apos;s get in touch!</span>
 
 						<div className='contact__container container grid'>
 							<div>
