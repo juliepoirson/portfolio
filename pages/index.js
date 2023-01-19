@@ -586,38 +586,34 @@ export default function Home() {
 						<div className='portfolio__container container'>
 							<div className='portfolio__content portfolio__card'>
 								<Image src={knc} alt='project1' className='portfolio__img' />
-								<div>
-									<div className='portfolio__data1'>
-										<h3 className='portfolio__title'>KNC project</h3>
-										<p className='portfolio__description'>
-											<strong>Marketing research</strong> project carried out on
-											the Kansas Nonprofit Chamber.
-										</p>
-									</div>
-									<Link
-										href='/kncproject'
-										className='button button--flex button--small portfolio__button1'
-									>
-										Check it out!
-										<UilArrowRight className='button__icon'></UilArrowRight>
-									</Link>
+								<div className='portfolio__data'>
+									<h3 className='portfolio__title'>KNC project</h3>
+									<p className='portfolio__description'>
+										<strong>Marketing research</strong> project carried out for
+										the Kansas Nonprofit Chamber about their members.
+									</p>
 								</div>
+								<Link
+									href='/kncproject'
+									className='button button--flex button--small portfolio__button'
+								>
+									Check it out!
+									<UilArrowRight className='button__icon'></UilArrowRight>
+								</Link>
 							</div>
 							<div className='portfolio__content portfolio__card'>
 								<Image src={webapp} alt='project2' className='portfolio__img' />
-								<div>
-									<div className='portfolio__data'>
-										<h3 className='portfolio__title'>Blog</h3>
-										<p className='portfolio__description'>
-											<strong>Web application</strong> in the form of a blog.
-											<br /> Created with React and NextJS.
-										</p>
-									</div>
-									<a className='button button--flex button--small portfolio__button'>
-										Coming soon
-										<UilArrowRight className='button__icon'></UilArrowRight>
-									</a>
+								<div className='portfolio__data'>
+									<h3 className='portfolio__title'>Blog</h3>
+									<p className='portfolio__description'>
+										<strong>Web application</strong> in the form of a blog.
+										<br /> Created with React and NextJS.
+									</p>
 								</div>
+								<a className='button button--flex button--small portfolio__button'>
+									Coming soon
+									<UilArrowRight className='button__icon'></UilArrowRight>
+								</a>
 							</div>
 						</div>
 					</section>

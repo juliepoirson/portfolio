@@ -661,12 +661,9 @@ img {
 }
 
 .portfolio__img {
+	height: 120px;
 	border-radius: 0.5rem;
 	justify-self: center;
-}
-
-.portfolio__data1 {
-	margin-top: 13%;
 }
 
 .portfolio__title {
@@ -681,10 +678,6 @@ img {
 .portfolio__button:hover .button__icon,
 .portfolio__button1:hover .button__icon {
 	transform: translate(0.25rem);
-}
-
-.portfolio__button1 {
-	margin-top: 11%;
 }
 
 /*==================== PORTFOLIO PROJECTS ====================*/
