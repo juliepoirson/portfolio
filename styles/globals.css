@@ -929,6 +929,23 @@ img {
 		gap: 0.5rem;
 	}
 
+	.portfolio__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.portfolio__card {
+		padding: 8%;
+	}
+	.portfolio__data {
+		margin-top: 10%;
+	}
+
+	.portfolio__button {
+		padding-top: 9%;
+	}
+
 	.project__img {
 		width: 200px;
 	}
@@ -938,6 +955,25 @@ img {
 	}
 	.qualification__calendar--right {
 		left: 60%;
+	}
+}
+
+@media screen and (min-width: 350px) and (max-width: 620px) {
+	.portfolio__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.portfolio__card {
+		padding: 8%;
+	}
+	.portfolio__data {
+		margin-top: 0%;
+	}
+
+	.portfolio__button {
+		margin-top: 0%;
 	}
 }
 
