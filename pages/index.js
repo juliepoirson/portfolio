@@ -43,14 +43,8 @@ export default function Home() {
 
 	const [secondQual, setSecondQual] = useState(true)
 
-	const changeQualFalse = () => {
-		setSecondQual(false)
-		console.log(secondQual)
-	}
-
-	const changeQualTrue = () => {
-		setSecondQual(true)
-		console.log(secondQual)
+	const qualChange = () => {
+		setSecondQual(!secondQual)
 	}
 
 	return (
@@ -410,7 +404,7 @@ export default function Home() {
 										secondQual ? 'qualification__active' : ''
 									}`}
 									data-target='#education'
-									onClick={changeQualTrue}
+									onClick={qualChange}
 								>
 									<UilGraduationCap className='qualification__icon' />
 									Education
@@ -420,7 +414,7 @@ export default function Home() {
 										secondQual ? '' : 'qualification__active'
 									}`}
 									data-target='#work'
-									onClick={changeQualFalse}
+									onClick={qualChange}
 								>
 									<UilBriefcaseAlt className='qualification__icon' />
 									Work
@@ -435,7 +429,7 @@ export default function Home() {
 										<div className='qualification__data'>
 											<div>
 												<h3 className='qualification__title'>
-													Master in Information Systems, Cybersecurity & Big
+													Master in Information systems, Cybersecurity & Big
 													data
 												</h3>
 												<span className='qualification__subtitle'>

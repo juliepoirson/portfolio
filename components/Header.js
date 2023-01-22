@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { useState, useEffect, useRef } from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll-v2'
 import { UilTimes } from '@iconscout/react-unicons'
 import { UilApps } from '@iconscout/react-unicons'
@@ -9,14 +10,40 @@ import { UilScenery } from '@iconscout/react-unicons'
 import { UilMessage } from '@iconscout/react-unicons'
 
 export default function Header() {
+	const [navToggle, setNavToggle] = useState(false)
+	const navRef = useRef(null)
+
+	const navToggleChange = () => {
+		setNavToggle(!navToggle)
+	}
+
+	useEffect(() => {
+		const handleScroll = () => {
+			if (window.scrollY >= 200) {
+				navRef.current.classList.add('scroll-header')
+			} else {
+				navRef.current.classList.remove('scroll-header')
+			}
+		}
+
+		window.addEventListener('scroll', handleScroll)
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll)
+		}
+	}, [])
+
 	return (
-		<header className='header' id='header'>
+		<header className='header' id='header' ref={navRef}>
 			<nav className='nav container'>
 				<Link href='/' className='nav__logo'>
 					Julie
 				</Link>
 
-				<div className='nav__menu' id='nav-menu'>
+				<div
+					className={`nav__menu ${navToggle ? 'show-menu' : ''}`}
+					id='nav-menu'
+				>
 					<ul className='nav__list grid'>
 						<li className='nav__item'>
 							<Link href='/' className='nav__link'>
@@ -59,12 +86,16 @@ export default function Header() {
 							</AnchorLink>
 						</li>
 					</ul>
-					<i className='nav__close' id='nav-close'>
+					<i className='nav__close' onClick={navToggleChange} id='nav-close'>
 						<UilTimes />
 					</i>
 				</div>
 				<div className='nav__btns'>
-					<div className='nav__toggle' id='nav-toggle'>
+					<div
+						className='nav__toggle'
+						onClick={navToggleChange}
+						id='nav-toggle'
+					>
 						<i>
 							<UilApps />
 						</i>
