@@ -46,7 +46,15 @@ export default function Header() {
 				>
 					<ul className='nav__list grid'>
 						<li className='nav__item'>
-							<Link href='/' className='nav__link'>
+							<Link
+								href='/'
+								className='nav__link'
+								onClick={() => {
+									if (navToggle) {
+										navToggleChange()
+									}
+								}}
+							>
 								<i className='nav__icon'>
 									<UilEstate />
 								</i>
@@ -54,7 +62,15 @@ export default function Header() {
 							</Link>
 						</li>
 						<li className='nav__item'>
-							<AnchorLink href='#about' className='nav__link'>
+							<AnchorLink
+								href='#about'
+								className='nav__link'
+								onClick={() => {
+									if (navToggle) {
+										navToggleChange()
+									}
+								}}
+							>
 								<i className='nav__icon'>
 									<UilUser />
 								</i>
@@ -62,7 +78,15 @@ export default function Header() {
 							</AnchorLink>
 						</li>
 						<li className='nav__item'>
-							<AnchorLink href='#skills' className='nav__link'>
+							<AnchorLink
+								href='#skills'
+								className='nav__link'
+								onClick={() => {
+									if (navToggle) {
+										navToggleChange()
+									}
+								}}
+							>
 								<i className='nav__icon'>
 									<UilFileAlt />
 								</i>
@@ -70,7 +94,15 @@ export default function Header() {
 							</AnchorLink>
 						</li>
 						<li className='nav__item'>
-							<AnchorLink href='#portfolio' className='nav__link'>
+							<AnchorLink
+								href='#portfolio'
+								className='nav__link'
+								onClick={() => {
+									if (navToggle) {
+										navToggleChange()
+									}
+								}}
+							>
 								<i className='nav__icon'>
 									<UilScenery />
 								</i>
@@ -78,7 +110,15 @@ export default function Header() {
 							</AnchorLink>
 						</li>
 						<li className='nav__item'>
-							<AnchorLink href='#contact' className='nav__link'>
+							<AnchorLink
+								href='#contact'
+								className='nav__link'
+								onClick={() => {
+									if (navToggle) {
+										navToggleChange()
+									}
+								}}
+							>
 								<i className='nav__icon'>
 									<UilMessage />
 								</i>
