@@ -98,8 +98,7 @@ export default function Home() {
 									</h3>
 									<p className='home__description'>
 										Results driven and inquisitive engineering student currently
-										pursuing a double major in information systems,
-										cybersecurity, data science & marketing.
+										looking for a 4-month internship for spring 2023!
 									</p>
 									<AnchorLink href='#contact' className='button button--flex'>
 										Contact Me
@@ -136,43 +135,23 @@ export default function Home() {
 
 							<div className='about__data'>
 								<p className='about__description'>
-									Hi, I am Julie, an engineering student with a marketing
-									background!
+									Hello, I am Julie, an engineering student with a background in
+									marketing!
 									<br />
 									I originally pursued a degree in marketing, and eventually
 									discovered a love for programming.
 									<br />
-									Since my school was offering the possibility to graduate with
-									a double major, I took that opportunity and chose to turn to
-									data science.
+									Given the opportunity to graduate with a double major, I
+									jumped at the chance and decided to pursue data science as
+									well.
+									<br />
+									This has been a truly exciting and fulfilling journey for me
+									and I am thrilled to continue to develop my skills.
 								</p>
-
-								{/* <div className='about__info'>
-									<div>
-										<span className='about__info-title'>0</span>
-										<span className='about__info-name'>
-											Years <br />
-											experience
-										</span>
-									</div>
-									<div>
-										<span className='about__info-title'>0</span>
-										<span className='about__info-name'>
-											Completed <br />
-											projects
-										</span>
-									</div>
-									<div>
-										<span className='about__info-title'>0</span>
-										<span className='about__info-name'>
-											Companies <br />
-										</span>
-									</div>
-								</div> */}
 								<div className='about__buttons'>
 									<a
-										download=''
-										href='../assets/resume-julie-poirson.pdf'
+										href='/resume.pdf'
+										download='resume-julie-poirson.pdf'
 										className='button button--flex'
 									>
 										Download resume
@@ -207,7 +186,7 @@ export default function Home() {
 												<div>
 													<h1 className='skills__title'>Programming</h1>
 													<span className='skills__subtitle'>
-														Less than a year
+														~ About a year
 													</span>
 												</div>
 											</div>
@@ -277,7 +256,7 @@ export default function Home() {
 												<div>
 													<h1 className='skills__title'>Technologies</h1>
 													<span className='skills__subtitle'>
-														Less than a year
+														~ About a year
 													</span>
 												</div>
 											</div>
@@ -290,7 +269,16 @@ export default function Home() {
 														<span className='skills__number'>60%</span>
 													</div>
 													<div className='skills__bar'>
-														<span className='skills__percentage skills__inbound'></span>
+														<span className='skills__percentage skills__git'></span>
+													</div>
+												</div>
+												<div className='skills__data'>
+													<div className='skills__titles'>
+														<h3 className='skills__name'>Next.js/React</h3>
+														<span className='skills__number'>30%</span>
+													</div>
+													<div className='skills__bar'>
+														<span className='skills__percentage skills__react'></span>
 													</div>
 												</div>
 												<div className='skills__data'>
@@ -299,16 +287,7 @@ export default function Home() {
 														<span className='skills__number'>30%</span>
 													</div>
 													<div className='skills__bar'>
-														<span className='skills__percentage skills__research'></span>
-													</div>
-												</div>
-												<div className='skills__data'>
-													<div className='skills__titles'>
-														<h3 className='skills__name'>React</h3>
-														<span className='skills__number'>40%</span>
-													</div>
-													<div className='skills__bar'>
-														<span className='skills__percentage skills__hubspot'></span>
+														<span className='skills__percentage skills__mysql'></span>
 													</div>
 												</div>
 												<div className='skills__data'>
@@ -455,68 +434,6 @@ export default function Home() {
 									>
 										<div className='qualification__data'>
 											<div>
-												<h3 className='qualification__title'>Law School</h3>
-												<span className='qualification__subtitle'>
-													Nanterre University
-												</span>
-												<div>
-													<UilCalendarAlt className='qualification__calendar' />
-													2018 - 2020
-												</div>
-											</div>
-											<div>
-												<span className='qualification__rounder'></span>
-												<span className='qualification__line'></span>
-											</div>
-										</div>
-
-										<div className='qualification__data'>
-											<div></div>
-
-											<div>
-												<span className='qualification__rounder'></span>
-												<span className='qualification__line'></span>
-											</div>
-
-											<div>
-												<h3 className='qualification__title'>
-													Master in Marketing
-												</h3>
-												<span className='qualification__subtitle'>
-													ESCE Paris
-												</span>
-												<div>
-													<UilCalendarAlt className='qualification__calendar' />
-													2020 - 2023
-												</div>
-											</div>
-										</div>
-										<div className='qualification__data'>
-											<div>
-												<h3 className='qualification__title'>
-													Exchange semester in the US
-												</h3>
-												<span className='qualification__subtitle'>
-													Wichita State University
-												</span>
-												<div>
-													<UilCalendarAlt className='qualification__calendar' />
-													2022
-												</div>
-											</div>
-											<div>
-												<span className='qualification__rounder'></span>
-												<span className='qualification__line'></span>
-											</div>
-										</div>
-										<div className='qualification__data'>
-											<div></div>
-
-											<div>
-												<span className='qualification__rounder'></span>
-											</div>
-
-											<div>
 												<h3 className='qualification__title'>
 													Master in Information Systems, Cybersecurity & Big
 													data
@@ -529,6 +446,66 @@ export default function Home() {
 													2022 - 2024
 												</div>
 											</div>
+
+											<div>
+												<span className='qualification__rounder'></span>
+												<span className='qualification__line'></span>
+											</div>
+										</div>
+
+										<div className='qualification__data'>
+											<div></div>
+
+											<div>
+												<span className='qualification__rounder'></span>
+												<span className='qualification__line'></span>
+											</div>
+											<div>
+												<h3 className='qualification__title'>
+													Exchange semester in the US
+												</h3>
+												<span className='qualification__subtitle'>
+													Wichita State University
+												</span>
+												<div>
+													<UilCalendarAlt className='qualification__calendar' />
+													2022
+												</div>
+											</div>
+										</div>
+										<div className='qualification__data'>
+											<div>
+												<h3 className='qualification__title'>
+													Master in Marketing
+												</h3>
+												<span className='qualification__subtitle'>
+													ESCE Paris
+												</span>
+												<div>
+													<UilCalendarAlt className='qualification__calendar' />
+													2020 - 2023
+												</div>
+											</div>
+											<div>
+												<span className='qualification__rounder'></span>
+												<span className='qualification__line'></span>
+											</div>
+										</div>
+										<div className='qualification__data'>
+											<div></div>
+											<div>
+												<span className='qualification__rounder'></span>
+											</div>
+											<div>
+												<h3 className='qualification__title'>Law School</h3>
+												<span className='qualification__subtitle'>
+													Nanterre University
+												</span>
+												<div>
+													<UilCalendarAlt className='qualification__calendar' />
+													2018 - 2020
+												</div>
+											</div>
 										</div>
 									</div>
 								) : (
@@ -538,15 +515,13 @@ export default function Home() {
 									>
 										<div className='qualification__data'>
 											<div>
-												<h3 className='qualification__title'>
-													Marketing Assistant
+												<h3 class='qualification__title'>
+													English teacher <br /> and tutor
 												</h3>
-												<span className='qualification__subtitle'>
-													Eventtia
-												</span>
+												<span class='qualification__subtitle'>Acadomia</span>
 												<div>
 													<UilCalendarAlt className='qualification__calendar' />
-													2021 (3 months)
+													Sept 2022 - now
 												</div>
 											</div>
 											<div>
@@ -561,15 +536,16 @@ export default function Home() {
 												<span class='qualification__rounder'></span>
 												<span class='qualification__line'></span>
 											</div>
-
 											<div>
-												<h3 class='qualification__title'>
-													English teacher and tutor
+												<h3 className='qualification__title'>
+													Marketing Assistant
 												</h3>
-												<span class='qualification__subtitle'>Acadomia</span>
+												<span className='qualification__subtitle'>
+													Eventtia
+												</span>
 												<div>
 													<UilCalendarAlt className='qualification__calendar' />
-													Sept 2022 - now
+													2021 (3 months)
 												</div>
 											</div>
 										</div>
@@ -590,7 +566,7 @@ export default function Home() {
 									<h3 className='portfolio__title'>Blog</h3>
 									<p className='portfolio__description'>
 										<strong>Web application</strong> in the form of a blog.
-										<br /> Created with React and NextJS.
+										<br /> Created with Next.js and SQL.
 									</p>
 								</div>
 								<a className='button button--flex button--small portfolio__button'>
@@ -658,15 +634,11 @@ export default function Home() {
 							>
 								<div className='contact__inputs grid'>
 									<div className='contact__content'>
-										<label for='' className='contact__label'>
-											Name
-										</label>
+										<label className='contact__label'>Name</label>
 										<input type='text' name='name' className='contact__input' />
 									</div>
 									<div className='contact__content'>
-										<label for='' className='contact__label'>
-											Email
-										</label>
+										<label className='contact__label'>Email</label>
 										<input
 											type='email'
 											name='email'
@@ -675,9 +647,7 @@ export default function Home() {
 									</div>
 								</div>
 								<div className='contact__content'>
-									<label for='' className='contact__label'>
-										Message
-									</label>
+									<label className='contact__label'>Message</label>
 									<textarea
 										name='message'
 										id=''
