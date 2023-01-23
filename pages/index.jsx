@@ -53,7 +53,7 @@ export default function Home() {
 				<title>Julie Poirson&apos;s portfolio</title>
 				<meta name='description' content='homepage' />
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
-				<link rel='icon' href='/favicon.ico' />
+				<link rel='icon' href='/images/favicon.ico' />
 			</Head>
 			<div className='body'>
 				<main className='main'>
