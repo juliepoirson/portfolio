@@ -429,8 +429,8 @@ export default function Home() {
 										<div className='qualification__data'>
 											<div>
 												<h3 className='qualification__title'>
-													Master in Information systems, Cybersecurity & Big
-													data
+													Master&apos;s in Information systems, Cybersecurity &
+													Big data
 												</h3>
 												<span className='qualification__subtitle'>
 													ECE Paris
@@ -470,7 +470,7 @@ export default function Home() {
 										<div className='qualification__data'>
 											<div>
 												<h3 className='qualification__title'>
-													Master in Marketing
+													Master&apos;s in Marketing
 												</h3>
 												<span className='qualification__subtitle'>
 													ESCE Paris
