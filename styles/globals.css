@@ -516,6 +516,14 @@ img {
 	background-color: var(--first-color);
 }
 
+.skills__python {
+	width: 50%;
+}
+
+.skills__js {
+	width: 50%;
+}
+
 .skills__sql {
 	width: 50%;
 }
@@ -528,18 +536,14 @@ img {
 	width: 30%;
 }
 
-.skills__python {
-	width: 20%;
-}
-
 .skills__git {
 	width: 60%;
 }
 .skills__react {
-	width: 30%;
+	width: 60%;
 }
-.skills__mysql {
-	width: 30%;
+.skills__django {
+	width: 20%;
 }
 
 .skills__inbound {

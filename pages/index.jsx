@@ -92,7 +92,8 @@ export default function Home() {
 									</h3>
 									<p className='home__description'>
 										Results driven and inquisitive engineering student currently
-										looking for a 4-month internship for spring 2023!
+										looking for an end-of-study internship starting in February
+										2024!
 									</p>
 									<AnchorLink href='#contact' className='button button--flex'>
 										Contact Me
@@ -179,14 +180,30 @@ export default function Home() {
 												<UilBracketsCurly className='skills__icon' />
 												<div>
 													<h1 className='skills__title'>Programming</h1>
-													<span className='skills__subtitle'>
-														~ About a year
-													</span>
+													<span className='skills__subtitle'>Two years</span>
 												</div>
 											</div>
 										</AccordionSummary>
 										<AccordionDetails>
 											<div className='skills__list grid'>
+												<div className='skills__data'>
+													<div className='skills__titles'>
+														<h3 className='skills__name'>Python</h3>
+														<span className='skills__number'>50%</span>
+													</div>
+													<div className='skills__bar'>
+														<span className='skills__percentage skills__python'></span>
+													</div>
+												</div>
+												<div className='skills__data'>
+													<div className='skills__titles'>
+														<h3 className='skills__name'>Javascript</h3>
+														<span className='skills__number'>50%</span>
+													</div>
+													<div className='skills__bar'>
+														<span className='skills__percentage skills__js'></span>
+													</div>
+												</div>
 												<div className='skills__data'>
 													<div className='skills__titles'>
 														<h3 className='skills__name'>SQL</h3>
@@ -216,20 +233,9 @@ export default function Home() {
 												</div>
 												<div className='skills__data'>
 													<div className='skills__titles'>
-														<h3 className='skills__name'>Python</h3>
-														<span className='skills__number'>20%</span>
-													</div>
-													<div className='skills__bar'>
-														<span className='skills__percentage skills__python'></span>
-													</div>
-												</div>
-												<div className='skills__data'>
-													<div className='skills__titles'>
 														<h3 className='skills__name'>Experience with:</h3>
 													</div>
-													<p className='skills__experience'>
-														NoSQL, JavaScript, C#
-													</p>
+													<p className='skills__experience'>NoSQL, C#</p>
 												</div>
 											</div>
 										</AccordionDetails>
@@ -249,9 +255,7 @@ export default function Home() {
 												<UilRobot className='skills__icon' />
 												<div>
 													<h1 className='skills__title'>Technologies</h1>
-													<span className='skills__subtitle'>
-														~ About a year
-													</span>
+													<span className='skills__subtitle'>Two years</span>
 												</div>
 											</div>
 										</AccordionSummary>
@@ -269,7 +273,7 @@ export default function Home() {
 												<div className='skills__data'>
 													<div className='skills__titles'>
 														<h3 className='skills__name'>Next.js/React</h3>
-														<span className='skills__number'>30%</span>
+														<span className='skills__number'>60%</span>
 													</div>
 													<div className='skills__bar'>
 														<span className='skills__percentage skills__react'></span>
@@ -277,11 +281,11 @@ export default function Home() {
 												</div>
 												<div className='skills__data'>
 													<div className='skills__titles'>
-														<h3 className='skills__name'>MySQL</h3>
-														<span className='skills__number'>30%</span>
+														<h3 className='skills__name'>Django</h3>
+														<span className='skills__number'>20%</span>
 													</div>
 													<div className='skills__bar'>
-														<span className='skills__percentage skills__mysql'></span>
+														<span className='skills__percentage skills__django'></span>
 													</div>
 												</div>
 												<div className='skills__data'>
@@ -430,7 +434,7 @@ export default function Home() {
 											<div>
 												<h3 className='qualification__title'>
 													Master&apos;s in Information systems, Cybersecurity &
-													Big data
+													Big data analytics
 												</h3>
 												<span className='qualification__subtitle'>
 													ECE Paris
@@ -470,7 +474,7 @@ export default function Home() {
 										<div className='qualification__data'>
 											<div>
 												<h3 className='qualification__title'>
-													Master&apos;s in Marketing
+													Master&apos;s in International Digital Marketing
 												</h3>
 												<span className='qualification__subtitle'>
 													ESCE Paris
@@ -507,6 +511,24 @@ export default function Home() {
 										className='qualification__content qualification__active'
 										id='work'
 									>
+										<div class='qualification__data'>
+											<div></div>
+
+											<div>
+												<span class='qualification__rounder'></span>
+												<span class='qualification__line'></span>
+											</div>
+											<div>
+												<h3 className='qualification__title'>
+													Full Stack Growth Engineer (Internship)
+												</h3>
+												<span className='qualification__subtitle'>Dashdoc</span>
+												<div>
+													<UilCalendarAlt className='qualification__calendar' />
+													2023 (5 months)
+												</div>
+											</div>
+										</div>
 										<div className='qualification__data'>
 											<div>
 												<h3 class='qualification__title'>
@@ -515,7 +537,7 @@ export default function Home() {
 												<span class='qualification__subtitle'>Acadomia</span>
 												<div>
 													<UilCalendarAlt className='qualification__calendar' />
-													Sept 2022 - now
+													2022 - 2023
 												</div>
 											</div>
 											<div>
@@ -532,7 +554,7 @@ export default function Home() {
 											</div>
 											<div>
 												<h3 className='qualification__title'>
-													Marketing Assistant
+													Marketing Assistant (Internship)
 												</h3>
 												<span className='qualification__subtitle'>
 													Eventtia
